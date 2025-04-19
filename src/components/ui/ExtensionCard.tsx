@@ -14,9 +14,20 @@ const ExtensionCard: React.FC<IExtension> = (props: IExtension) => {
             </p>
           </div>
         </div>
-        <div className="absolute bottom-0 mb-[16px] flex">
-          <div className="flex items-center justify-center rounded-2xl bg-[#171b26] px-3 py-2 text-sm text-white hover:cursor-pointer">
+        <div className="relative mb-[16px] mt-auto flex w-full max-w-[500px] items-center">
+          <div className="absolute flex items-center justify-center rounded-2xl bg-[#171b26] px-3 py-2 text-sm text-white hover:cursor-pointer">
             Remove
+          </div>
+          <div
+            className={`absolute right-0 flex h-[20px] w-[40px] justify-center rounded-2xl text-sm text-white hover:cursor-pointer${
+              props.isActive ? " bg-[#00b87c]" : " bg-[#171b26]"
+            }`}
+          >
+            {props.isActive ? (
+              <div className="absolute right-0 h-[20px] w-[20px] rounded-full bg-slate-300" />
+            ) : (
+              <div className="absolute left-0 h-[20px] w-[20px] rounded-full bg-[#8d92a4]" />
+            )}
           </div>
         </div>
       </div>

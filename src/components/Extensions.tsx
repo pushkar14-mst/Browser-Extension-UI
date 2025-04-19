@@ -13,7 +13,7 @@ const Extensions: React.FC = () => {
           <ExtensionFilters />
         </div>
       </div>
-      <div className="mt-4 flex w-full flex-wrap gap-4">
+      <div className="mt-4 flex w-full flex-wrap gap-5">
         {data.map((extension) => (
           <div key={extension.name} className="flex w-full max-w-[300px]">
             <ExtensionCard
